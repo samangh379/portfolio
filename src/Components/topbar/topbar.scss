@@ -7,12 +7,15 @@
     color: $mainColor;
     position: fixed;
     top: 0;
-    z-index: 2;
+    z-index: 3;
+    transition: all 1s ease;
+
     .wrapper {
         display: flex;
         padding: 10px 30px;
         align-items: center;
         justify-content: space-between;
+
         .left {
             display: flex;
             align-items: center;
@@ -39,6 +42,7 @@
                 }
             }
         }
+
         .right {
             .hamburger {
                 scrollbar-width: none; //for firefox
@@ -51,7 +55,9 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                transition: all 3s ease;
                 cursor: pointer;
+
                 span {
                     width: 100%;
                     height: 3px;
@@ -62,8 +68,10 @@
             }
         }
     }
+
     &.active {
         background-color: $mainColor;
+
         color: white;
         .hamburger {
             span {

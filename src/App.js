@@ -6,6 +6,7 @@ import Works from "./Components/works/Works";
 import Testimonials from "./Components/testimonials/Testimonials";
 import Contact from "./Components/contact/Contact";
 import "../src/app.scss";
+import Menu from "./Components/menu/Menu";
 
 //Sass
 
@@ -14,6 +15,7 @@ const App = () => {
     return (
         <div className="app">
             <Topbar menuOpen={menuOpen} setmenuOpen={setmenuOpen} />
+            <Menu menuOpen={menuOpen} setmenuOpen={setmenuOpen} />
             <div className="sections">
                 <Intro />
                 <Portfolio />
