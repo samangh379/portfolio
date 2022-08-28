@@ -44,7 +44,7 @@ const Testimonials = () => {
                         </div>
                         <div className="center">{d.desc}</div>
                         <div className="bottom">
-                            <h3>{d.name}</h3>
+                            <h3 className="name">{d.name}</h3>
                             <h4>{d.title}</h4>
                         </div>
                     </div>
