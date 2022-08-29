@@ -11,21 +11,23 @@
             font-size: 26px;
         }
         @include land {
-            font-size: 32px;
+            font-size: 28px;
             overflow: hidden;
         }
     }
 
     ul {
-        margin: 10px;
+        // margin: 10px;
         padding: 0;
         display: flex;
 
         li {
             font-size: 18px;
+            width: fit-content;
+            overflow: hidden;
             background-color: $mainColor;
             color: white;
-            padding: 7px;
+            padding: 0 5px;
             border-radius: 10px;
             text-align: center;
             @include mobile {
@@ -40,11 +42,17 @@
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
-
+        padding-bottom: 20px;
         overflow: hidden;
         @include mobile {
             width: 95%;
-            height: 70%;
+            height: 90%;
+            margin: auto;
+        }
+        @include land {
+            width: 95%;
+            height: 330px;
+            margin: auto;
         }
 
         .item {
@@ -53,7 +61,7 @@
                 height: 130px;
             }
             @include land {
-                height: 100px;
+                height: 94px;
             }
 
             @media only screen and (max-width: 500px) {

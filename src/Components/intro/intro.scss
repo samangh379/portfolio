@@ -26,8 +26,8 @@
                 align-items: flex-start;
             }
             @include land {
-                width: 500px;
-                height: 300px;
+                width: 400px;
+                height: 400px;
             }
 
             img {
@@ -46,6 +46,9 @@
     .right {
         flex: 0.5;
         position: relative;
+        @include land {
+            padding-bottom: 35px;
+        }
         .wrapper {
             height: 100%;
             width: 100%;
@@ -61,6 +64,7 @@
             }
             @include land {
                 height: 80%;
+                padding-bottom: 5px;
             }
 
             h1 {
@@ -68,6 +72,7 @@
                 margin: 13px 0;
                 @include mobile {
                     text-align: center;
+                    font-size: 40px;
                 }
                 @include land {
                     font-size: 40px;
@@ -76,13 +81,13 @@
             h2 {
                 font-size: 35px;
                 @include land {
-                    font-size: 28px;
+                    font-size: 24px;
                     overflow: hidden;
                 }
             }
             h3 {
                 @include mobile {
-                    font-size: 24px;
+                    font-size: 20px;
                 }
 
                 @include land {
@@ -96,6 +101,13 @@
                 }
             }
             a {
+                @include mobile {
+                    display: none;
+                }
+
+                @include land {
+                    display: none;
+                }
                 position: absolute;
                 bottom: 10px;
                 left: 40%;

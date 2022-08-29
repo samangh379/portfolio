@@ -51,14 +51,14 @@
         left: 0;
 
         @include mobile {
-            height: 90vh;
+            height: 90%;
             flex-direction: column;
             justify-content: center;
             align-items: center;
         }
 
         @include land {
-            height: 350px;
+            height: 100%;
             flex-direction: row;
             justify-content: flex-start;
             position: absolute;
@@ -74,7 +74,7 @@
             justify-content: center;
             overflow: hidden;
             @include land {
-                height: 78vh;
+                height: 232px;
                 margin: auto;
             }
             @include mobile {
@@ -111,7 +111,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    height: 80%;
+                    height: 100%;
 
                     .leftContainer {
                         width: 90%;
