@@ -1,3 +1,4 @@
+@import "../../global.scss";
 .works {
     background-color: crimson;
     display: flex;
@@ -5,7 +6,7 @@
     overflow: hidden;
     justify-content: center;
     position: relative;
-    @import "../../global.scss";
+
     .arrow {
         position: absolute;
         width: 50px;
@@ -15,6 +16,11 @@
         @include mobile {
             display: none;
         }
+        @include land {
+            display: inline;
+
+            width: 30px;
+        }
 
         @keyframes arrowBlink {
             100% {
@@ -23,12 +29,18 @@
         }
 
         &.left {
-            left: 100px;
+            left: 50px;
             transform: rotateY(180deg);
+            @include land {
+                left: 10px;
+            }
         }
 
         &.right {
-            right: 100px;
+            right: 50px;
+            @include land {
+                right: 10px;
+            }
         }
     }
 
@@ -39,10 +51,18 @@
         left: 0;
 
         @include mobile {
-            height: 100vh;
+            height: 90vh;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+        }
+
+        @include land {
+            height: 350px;
+            flex-direction: row;
+            justify-content: flex-start;
+            position: absolute;
+            left: 0;
         }
 
         transition: all 1s ease-out;
@@ -52,6 +72,14 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
+            @include land {
+                height: 78vh;
+                margin: auto;
+            }
+            @include mobile {
+                margin: 14px 0;
+            }
 
             .item {
                 width: 700px;
@@ -63,8 +91,18 @@
                 justify-content: center;
                 @include mobile {
                     width: 90%;
-                    height: 180px;
+
                     margin: 10px 0;
+                }
+
+                @include land {
+                    width: 550px;
+                    height: 100%;
+                    background-color: white;
+                    border-radius: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
 
                 .left {
@@ -118,6 +156,11 @@
                             font-size: 13px;
                             @include mobile {
                                 display: none;
+                            }
+                            @include land {
+                                font-size: 10px;
+                                display: inline;
+                                margin: 5px 0;
                             }
                         }
                         a {

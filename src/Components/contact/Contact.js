@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import "./contact.scss";
 import { Person, Mail } from "@material-ui/icons";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
-    const [state, setState] = useState(false);
     const submitHandler = (e) => {
         e.preventDefault();
-        setState(true);
     };
-
+    const notify = () => toast("I will replay as soon as possible ;) !");
     return (
         <div className="contact" id="contact">
             <div className="left">
@@ -19,9 +19,9 @@ const Contact = () => {
                 <form onSubmit={submitHandler}>
                     <input type="text" placeholder="Email" />
                     <textarea placeholder="Message"></textarea>
-                    <button type="submit">Send</button>
-
-                    {state && <span className="response">Thanks,I'll reply as soon as possible ;) </span>}
+                    <button type="submit" onClick={notify}>
+                        Send
+                    </button>
                 </form>
                 <div className="info">
                     <div className="itemCounter">
@@ -34,6 +34,17 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
+            <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
         </div>
     );
 };

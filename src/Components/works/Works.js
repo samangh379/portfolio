@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./works.scss";
 import ShopCart from "../../Photos/details.png";
 import github from "../../Photos/github.png";
-import CryptoPhoto from "../../Photos/CryptoPhoto.png";
+import CryptoPhoto from "../../Photos/CryptoPhoto .png";
 import SignUp from "../../Photos/SignUp.png";
 
 const Works = () => {

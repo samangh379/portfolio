@@ -15,6 +15,11 @@
             padding-top: 20px;
             overflow: hidden;
         }
+        @include land {
+            font-size: 20px;
+
+            overflow: hidden;
+        }
     }
     .container {
         width: 100%;
@@ -22,10 +27,16 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        overflow: hidden;
         @include mobile {
             flex-direction: column;
             margin: 20px 0;
             height: 100%;
+        }
+        @include land {
+            flex-direction: row;
+            width: 98%;
+            height: 70vh;
         }
 
         .card {
@@ -53,6 +64,10 @@
                     height: 180px;
                     width: 250px;
                 }
+                @include land {
+                    height: 200px;
+                    width: 250px;
+                }
             }
             &:hover {
                 transform: scale(1.1);
@@ -66,11 +81,18 @@
                     overflow: hidden;
                     padding-bottom: 5px;
                 }
+                @include land {
+                    padding-bottom: 0;
+                    overflow: hidden;
+                }
 
                 img {
                     &.left,
                     &.right {
                         height: 25px;
+                        @include land {
+                            height: 18px;
+                        }
                     }
                     &.user {
                         width: 60px;
@@ -84,6 +106,11 @@
                             height: 30px;
                             padding: 2px 0;
                         }
+                        @include land {
+                            width: 50px;
+                            height: 50px;
+                            padding: 2px 0;
+                        }
                     }
                 }
             }
@@ -95,6 +122,13 @@
                 @include mobile {
                     // font-size: 15px;
                     padding: 15px 0;
+                    font-size: 12px;
+                    overflow: hidden;
+                }
+
+                @include land {
+                    // font-size: 15px;
+                    padding: 7px 5px;
                     font-size: 12px;
                     overflow: hidden;
                 }

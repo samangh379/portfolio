@@ -27,6 +27,9 @@
         width: 60%;
         li {
             margin-bottom: 25px;
+            @include land {
+                margin-bottom: 10px;
+            }
 
             a {
                 color: inherit;

@@ -7,3 +7,9 @@ $width: 800px;
         @content;
     }
 }
+
+@mixin land {
+    @media screen and (orientation: landscape) and (max-width: 920px) {
+        @content;
+    }
+}
